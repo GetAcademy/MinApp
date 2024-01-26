@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.mainFlexContainer {
+            display: grid;
+            grid-template-columns: 100px auto;
+            grid-template-rows: 40px auto;
+            grid-template-areas: 
+                "header header"
+                "menu content"
+            ;
+            border: greenyellow 2px solid;
+            height: 97vh;
+        }
+
+        div.mainFlexContainer>div {
+            border: blue dashed 2px;
+            margin: 4px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainFlexContainer">
+        <div  style="grid-area: header;">
+            Header
+        </div>
+        <div style="grid-area: menu;">
+            <h1>Meny</h1>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </div>
+        <div style="grid-area: content;">
+            Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.
+            Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.
+            Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.
+            Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.
+            <img 
+                src="https://akamai.vgc.no/users/schibsted/images/100443197.jpg?t[strip]=1&t[crop][x]=0&t[crop][y]=0&t[crop][width]=3288&t[crop][height]=2177&t[resize][width]=2160&accessToken=d87cbf32a8d3f228d0114c59d3f9dcc64721ebbd0228fa18a5d5c7dd88904127" />
+            Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.
+        </div>
+    </div>
+</body>
+
+</html>
