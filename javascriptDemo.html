@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Grunnferdigheter i JavaScript</h1>
+    Du har trykket så mange ganger: 
+    <span id="info"></span>
+
+    <ul>
+        <li id="li1">
+            Endre del av HTML-dokument ut fra id
+            <br />
+            Ev. legge til istedenfor å endre <pre>.innerHTML = // endre<br/>.innerHTML += // legge til</pre>
+            <button onclick="removeFirstBulletPoint()">x</button>
+        </li>
+        <li id="li2">
+            Pakke en eller flere kommandoer ala forrige punkt inn i en ny kommandoer
+            - en JavaScript-funksjon
+            <button onclick="addTextLineToSecondBulletPoint()">+</button>
+        </li>
+        <li>
+            Kalle en JavaScript-funksjon
+            <ul>
+                <li>Fra en knapp</li>
+                <li>Fra en annen funksjon</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        function removeFirstBulletPoint(){
+            document.getElementById('li1').innerHTML = '';
+            addDot();
+        }
+
+        function addTextLineToSecondBulletPoint(){
+            document.getElementById('li2').innerHTML += '<br/>Hei!';
+            addDot();
+        }
+
+        function addDot(){
+            document.getElementById('info').innerHTML += ';';
+        }
+    </script>
+</body>
+
+</html>
